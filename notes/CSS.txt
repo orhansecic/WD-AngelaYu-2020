@@ -1,0 +1,44 @@
+CSS - Cascading Style Sheets
+CSS - cant do anything on its own, its purpose is to style an Markup language
+
+CSS code can be added through "style" attribute in HTML elements or as <style> </style> HTML element
+Every CSS line ends with ;
+
+For beautiful color combinations on websites: "colorhunt.co"
+
+CSS Syntax: https://prnt.sc/r7xfw8
+
+Anatomy of CSS:
+body {
+	background-color: red;
+} 
+Element that will be modified by CSS then curly brackets, inside of curly brackets you write the css code, every line ends with ;
+
+++Very Important Attribute that is added to elements to group them together for more precise CSS implementation is "CLASS":
++ It is added as the Attribute to the HTML element in the opening tag --> class=""
++ You can have more than one class per HTML element and class names can be used on more than one HTML element
++ Multiple class names example: <p class="ovojeprvaklasa ovojedrugaklasa">
++ Class is accessed in CSS by .nameoftheclass{}
+
+++Very Important Attribute that is added to elements for identifying them is called "id":
++ It is added as the Attribute to the HTML element in the opening tag --> id=""
++ You can only have one class per HTML element and that id name can not be used anywhere else
++ ID is accessed in CSS by #nameoftheid{}
+
+Pseudo classes --> :hover -->(Research this more)<--
+
+CSS elements:
+/* */ --> commenting
++ background-color: name of color; --> changes the color of the HTML element
+(The background of an element is the total size of the element, including padding and border (but not the margin).)
++ border-style: value; --> changes the style of border of specific element, every HTML element is essentially a box with this CSS code you are changing
+the style of that box. There are different values that can be set to this element.
++ border-radius
++ height: 2px; --> height of the box of the element set to 2 pixels, for an example adding 10 pixels to <hr> increases its size to 10 pixels, same as setting the 
+size="10" = height: 10;
++ width: 20px --> width of the box of the element set to 20 pixels.
++ border-width: --> specifies the width of the line that is border itself
++ border-color: --> sets the color of the border
++ color: --> changing the color of a text
++ font-size: --> size of the words
+

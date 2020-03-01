@@ -1,0 +1,31 @@
+h1 {
+  font-size: 200px;
+  color: red;
+}
+
+img {
+  background-color: red;
+}
+
+.bacon {
+  background-color: green;
+}
+
+#bacon{
+  background-color: blue;
+}
+
+img:hover{
+  background-color: gold;
+}
+
+h1:hover{
+  font-size: 200px;
+  color: gold;
+  border-style: dotted;
+  text-align: center;
+}
+
+#p{
+color:gold;  
+}

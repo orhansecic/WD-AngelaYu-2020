@@ -1,0 +1,60 @@
+HTML - HyperText Markup Language
+
+Documentation:
+- Documentation for HTML: "W3SCHOOL" and "MDN"
+- "DevDocs.io" -- collection of documentations for any programming language
+
+The Anatomy of an HTML tag:
+Two types of tags:
+1. Opening and Closing Tags - start with an opening tag <h1> content </h1> and end with a closing tag with content between them
+2. Self closing tags - like <br> they do not require a closing tag
+
+++Very Important Attribute that is added to elements to group them together for more precise CSS implementation is "CLASS":
++ It is added as the Attribute to the HTML element in the opening tag --> class=""
++ You can have more than one class per HTML element and class names can be used on more than one HTML element
++ Multiple class names example: <p class="ovojeprvaklasa ovojedrugaklasa">
++ Class is accessed in CSS by .nameoftheclass{}
+
+++Very Important Attribute that is added to elements for identifying them is called "id":
++ It is added as the Attribute to the HTML element in the opening tag --> id=""
++ You can only have one class per HTML element and that id name can not be used anywhere else
++ ID is accessed in CSS by #nameoftheid{}
+
+Pseudo classes --> :hover 
+
+HTML elements:
+<!-- Comment -->
++ <h1> </h1> -- <h6> </h6> --> Heading Element 1 largest / 6 smallest
++ <p> </p> --> adds a paragraph
++ <br> --> break, moves to the next line
++ <hr> --> similar to a break but it creates a greater break between the texts that is represented with a line
++ <i> </i> --> Italic
++ <em> </em> --> Italic but adds the "emphasis" to the text, <i> only visually styles it while <em> adds additional information
++ <b> </b> --> Bold
++ <strong> </strong> --> Same relationship between <b> and <strong> as between <i> and <em> 
+<!-- <em> and <strong> should be used -->
++<ul> </ul> --> unordered list, ordered with dots
++<ol> </ol> --> ordered list, ordered with different styles - "style" attribute
++<img> --> adds an image, it is fully dependable of attributes - src= the source of an image; alt= alternative text to display if image is not shown
++<a> </a> --> anchor tag, hypertext - important attribute href= hypertextreference basically value will tell the browser where to send user on press
+one more important attribute of <a> is target=_blank - opens the link in the new tab!
+Table: <table> </table> - creates a table element, <thead> </thead> , <tbody> </tbody>, <tfoot> </tfoot>, header of a table, body of a table and
+footer of a table.
+<tr> </tr> --> creates a table row, horizontal line
+<td> </td> --> table data adds a cell of information to the table row, it is set inside the <tr> element 
+<thead> </thead> --> header of a table and by deafult it is bolded, basicaly creating a row in a table that is set as a main head of a table instead
+of using <td> to cretes and fill table cells in the table for <thead> the <th> is used, we can use <th> on its own but it is a good practice to put it in
+<thead> element.
+<form> </form> --> The HTML <form> element represents a document section containing interactive controls for submitting information.
+Form does not use h1 or p for text, in a form developer uses label
+<label> </label> --> between it developer writes "Username" for an example or "Password"
+<input> (self-closing tag) --> creates a box for user to input data inside of the form, input has important attribute called "type" where you specify what kind
+of data is expected in that box
+<textarea> </textarea>	
+
+
+HTML tags' Attributes:
+-Attributes are used inside the HTML tags to add additional information about the style of a tag itself, what attributes do tags have can be found in
+the documentation.
+
+Anatomy of an Attribute in an HTML tag --> https://prnt.sc/r2aei0 (double click)   
