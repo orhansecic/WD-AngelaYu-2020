@@ -52,6 +52,16 @@ Form does not use h1 or p for text, in a form developer uses label
 of data is expected in that box
 <textarea> </textarea>	
 
+++ Divs ++
+This div is a special HTML element that allows us to divide our content up on our web site so that we can structure each div separately. 
+So essentially a div stands for a content division element and it basically allows you to split up or divide your content into separate containers or boxes 
+so that you can affect the layout of each box separately.
+
+++FaviCons++
+Icon added to the tab of the website, in the HTML <head> element <link> element is added rel (relation) changed to "icon" and href to the destination
+of the icon itself. 
+favicon.cc
+
 
 HTML tags' Attributes:
 -Attributes are used inside the HTML tags to add additional information about the style of a tag itself, what attributes do tags have can be found in
