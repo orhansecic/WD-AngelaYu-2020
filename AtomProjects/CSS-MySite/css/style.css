@@ -8,7 +8,23 @@ h1{
   padding: 0;
 }
 
-div{
+p{
+  margin-bottom: 0;
+}
+
+.top-container{
   background-color: #e4f9f5;
   text-align: center;
+}
+
+.middle-container{
+  background-color: red;
+  width: 200px;
+  height: 200px;
+}
+
+.bottom-container{
+  background-color: blue;
+  width:200px;
+  height:200px;
 }

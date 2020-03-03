@@ -8,6 +8,13 @@ For beautiful color combinations on websites: "colorhunt.co"
 
 CSS Syntax: https://prnt.sc/r7xfw8
 
+Box Model:
++ Every HTML element is represented as a "box model" in the browser. It has its own elements that are mostly set by the default values of the browser.
++ Those elements can be seen here: https://prnt.sc/ratq77
++ Every box has its border, the line that is setting the outline of the box.
++ Padding the internal space of the box element.
++ Margin the outer space of the box element.
+
 Anatomy of CSS:
 body {
 	background-color: red;
@@ -41,4 +48,7 @@ size="10" = height: 10;
 + border-color: --> sets the color of the border
 + color: --> changing the color of a text
 + font-size: --> size of the words
++padding
++margin
+
 
