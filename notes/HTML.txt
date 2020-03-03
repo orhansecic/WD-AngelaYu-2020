@@ -51,6 +51,7 @@ Form does not use h1 or p for text, in a form developer uses label
 <input> (self-closing tag) --> creates a box for user to input data inside of the form, input has important attribute called "type" where you specify what kind
 of data is expected in that box
 <textarea> </textarea>	
+<span> </span> --> HTML element that does not do much if its not edited with css, it acts as a container
 
 ++ Divs ++
 This div is a special HTML element that allows us to divide our content up on our web site so that we can structure each div separately. 

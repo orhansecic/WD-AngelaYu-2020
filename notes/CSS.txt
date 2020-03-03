@@ -50,5 +50,7 @@ size="10" = height: 10;
 + font-size: --> size of the words
 +padding
 +margin
++Display: Block or Inline or Inline-Block or None; --> how an element is displayed, block means that an element has the width of the page while inline
+means that elements box is around him, inline-block is best of both worlds - elements can be in a same line and you can affect the width of them.
 
 

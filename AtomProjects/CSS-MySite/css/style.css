@@ -14,7 +14,6 @@ p{
 
 .top-container{
   background-color: #e4f9f5;
-  text-align: center;
 }
 
 .middle-container{
@@ -27,4 +26,8 @@ p{
   background-color: blue;
   width:200px;
   height:200px;
+}
+
+#pro{
+  text-decoration: underline;
 }
