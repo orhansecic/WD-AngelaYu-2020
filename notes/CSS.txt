@@ -48,9 +48,21 @@ size="10" = height: 10;
 + border-color: --> sets the color of the border
 + color: --> changing the color of a text
 + font-size: --> size of the words
++ font-family: --> changes the style of text  --------------- W3SCHOOLS - CSS web safe fonts ----- CSS font stack shows the percentage of users that have
+that font so its safe to use it.
+++ GOOGLE FONTS ++ -- website from where you can pick fonts and embed them to your website so you are 100% sure that everyone will see your font
+as you made it.
++ text-align: centre --> centres the text
+
 +padding
 +margin
 +Display: Block or Inline or Inline-Block or None; --> how an element is displayed, block means that an element has the width of the page while inline
 means that elements box is around him, inline-block is best of both worlds - elements can be in a same line and you can affect the width of them.
++position: static, relative  --> static position of an HTML element is a default value which means that the HTML element will be shown on the website
+in the same order the code was written, relative changes the position of an HTML element by creating the ability of an element to move freely
+on the website by changing the properties (top, bottom, left, right) - 49. CSS Static and Relative Positioning
++position: absolute --> similar to relative, but it influences the position of HTML elements it does not leave a "ghost" of element where it was
+50. Absolute positioning
++ position: fixed
 
 
