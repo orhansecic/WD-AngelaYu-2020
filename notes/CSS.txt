@@ -1,6 +1,9 @@
 CSS - Cascading Style Sheets
 CSS - cant do anything on its own, its purpose is to style an Markup language
 
+For exercise: 
+https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK
+
 CSS code can be added through "style" attribute in HTML elements or as <style> </style> HTML element
 Every CSS line ends with ;
 

@@ -127,13 +127,22 @@ hr{
 
 #footer-name{
   color: white;
+
 }
 
 .footer-link{
-  padding: 20px;
+  margin: 20px 10px;
   font-weight: bold;
   text-decoration: none;
+  border-radius: 10px;
+
 }
+
+.footer-link:hover{
+  color: #EAF6F6;
+}
+
+/* For creating buttons --> https://www.bestcssbuttongenerator.com/
 /*
 .paragraph-skill-1{
   clear: left;

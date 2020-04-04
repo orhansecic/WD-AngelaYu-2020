@@ -1,5 +1,8 @@
 HTML - HyperText Markup Language
 
+For exercise: 
+https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK
+
 Documentation:
 - Documentation for HTML: "W3SCHOOL" and "MDN"
 - "DevDocs.io" -- collection of documentations for any programming language
