@@ -61,7 +61,7 @@ as you made it.
 + line-height: 2;
 
 +padding
-+margin - auto to center it from all sides, basically centers the elemnt in the page
++margin - auto to centre it from all sides, basically centres the element in the page
 +Display: Block or Inline or Inline-Block or None; --> how an element is displayed, block means that an element has the width of the page while inline
 means that elements box is around him, inline-block is best of both worlds - elements can be in a same line and you can affect the width of them.
 +position: static, relative  --> static position of an HTML element is a default value which means that the HTML element will be shown on the website
