@@ -1,1 +1,52 @@
 -Front-end Library-
+Installing Bootstrap - download from the HQ website of Bootstrap
+Bootstrap must be linked same way as CSS, the <link> element of bootstrap is taken from the website
+
+Wireframe - rough sketch of the website that you will make, it does not have too be pretty it does not have to be perfect. Its use is to create a rough
+idea of the website.
+
+Mock-up - is the opposite of Wireframe, it is a high detail representation of the website that developer will create
+
+Prototype - is the step above the Mock-up its the animated version of the idea how the website would look like
+
++For creating Wireframes online+
+balsamiq.cloud
+
+Websites:
+------------
+1. ui-patterns.com
+2. Dribble.com
+
+HTML elements learned in Bootstrap:
+Tutorial for navbar in Bootstrap - https://www.youtube.com/watch?v=23bpce-5s8I
++ <nav> </nav> - used the same way as div element, meaning nav has no purpose if it has no content. It is used to show that navigation should be inside
+of it and height and width is set by the elements inside of it.
+++Bootstrap - Navbar ++
+classes: 
+----------------------------------------------NavBar--------------------------------------------------------
+<nav>  
+navbar - najjednostavnije objasnjeno je da kreira najosnovniji css za navbar
+navbar-expand-{sm-md-lg-xl} - sluzi za kreiranje responsivenesa stranice ako stavis lg onda kad je ekran large velicine onda ce se prikazati
+navbar-{light-dark} - zada theme navbaru
+bg-{light-dark-...} - boja backgrounda se mijenja
+
+<a> 
+navbar-brand - kreira bramd u lijevom gornjem cosku stranice, moze biti slika ili rijeci, najbolje je da je brand anchor element
+
+<ul> - unutar svakog navbara mora biti unordered lista koja u sebi ima stvari koji su dio navbara, tipicno "brand" ne stoji u ul
+navbar-nav - daje osnovne css elemente da ul izgleda lijepo, uglavnom ovo je osnovna klasa koja se dodaje na ul
+ml-auto ili mr-auto - automacki ispuni velicinu prostora sa lijeve ili desne strane kako bi pomjerili listu lijevo ili desno (ml - margin left)
+
+<li> - svaka lista mora imati item koji je najcesce link (<a>)
+nav-item - classa koja se dodaje na list item 
+nav-link - classa koja se dodaje na anchor element list itema
+
+Za kreiranje hamburgera:
+1. Stavis sve sto ce ti biti unutar hamburgera u div.
+2. Taj div ima classu "collapse" i "navbar-collapse"
+3. kreiras <button> sa classom "navbar-toggler", button je izvan diva
+4. button ima vrijednost <span> sa classom "navbar-toggler-icon" koji kreira hamburger iconu
+5. button data-toggle="collapse" i data-target="#imeID-anadivu"
+6. div dobija id jednak vrijednosti data-target-a 
+7. na kraju moras importovati scripte JS sa Bootstrap stranice
+----------------------------------------------NavBar--------------------------------------------------------
