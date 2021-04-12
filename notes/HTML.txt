@@ -26,11 +26,11 @@ Two types of tags:
 Pseudo classes --> :hover 
 
 HTML elements:
-<!-- Comment --> -- Shortcut to comment something CTRL+SHIFT+7
+<!-- Comment -->
 + <h1> </h1> -- <h6> </h6> --> Heading Element 1 largest / 6 smallest
 + <p> </p> --> adds a paragraph
 + <br> --> break, moves to the next line
-+ <hr> --> similar to a break but it creates a greater break between the texts that is represented with a line (Attributes: noshade, size="")
++ <hr> --> similar to a break but it creates a greater break between the texts that is represented with a line
 + <i> </i> --> Italic
 + <em> </em> --> Italic but adds the "emphasis" to the text, <i> only visually styles it while <em> adds additional information
 + <b> </b> --> Bold

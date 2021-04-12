@@ -7,7 +7,7 @@ https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK
 CSS code can be added through "style" attribute in HTML elements or as <style> </style> HTML element
 Every CSS line ends with ;
 
-For beautiful color combinations on websites: "colorhunt.co"
+For beautiful colour combinations on websites: "colorhunt.co"
 
 CSS Syntax: https://prnt.sc/r7xfw8
 
@@ -41,7 +41,7 @@ CSS elements:
 /* */ --> commenting
 + background-color: name of color; --> changes the color of the HTML element
 (The background of an element is the total size of the element, including padding and border (but not the margin).)
-+ border-style: value; --> changes the style of border of specific element, every HTML element is essentially a box with this CSS code you are changing
++ border-style: value; --> changes the style of border of specific element, every HTML element is essentially a box, with this CSS code you are changing
 the style of that box. There are different values that can be set to this element.
 + border-radius
 + height: 2px; --> height of the box of the element set to 2 pixels, for an example adding 10 pixels to <hr> increases its size to 10 pixels, same as setting the 
@@ -61,7 +61,7 @@ as you made it.
 + line-height: 2;
 
 +padding
-+margin - auto to centre it from all sides, basically centres the element in the page
++margin - auto to center it from all sides, basically centers the elemnt in the page
 +Display: Block or Inline or Inline-Block or None; --> how an element is displayed, block means that an element has the width of the page while inline
 means that elements box is around him, inline-block is best of both worlds - elements can be in a same line and you can affect the width of them.
 +position: static, relative  --> static position of an HTML element is a default value which means that the HTML element will be shown on the website
@@ -73,4 +73,95 @@ on the website by changing the properties (top, bottom, left, right) - 49. CSS S
 + float: left; HTML element floats to the left, text will wrap around image
 + clear: left; anti float
 
+++++++++++++FlexBox++++++++++++
+Flex-Box Froggy - Great Game that helps you work on your flex-box skills.
 
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+Anatomy of FlexBox - https://prnt.sc/v307n2
+-Main Axis can be horizontal or vertical, it depends how is the flex-direction set.
+
++Properties of the "flex container" the parent object:
+------------------------------------------------------
+
+1. display: flex - defines the parent property to be a flex container
+
+2. flex-direction: row | row-reverse | column | column-reverse - specifies the direction of the flex items inside of the 
+flex container, to be more precise it specifies the direction of the main axis which basically is the same as saying that 
+it defines the direction of items.
+
+3. flex-wrap: nowrap | wrap | wrap-reverse -By default, flex items will all try to fit onto one line. That is the default 
+value which is equal to setting the "flex-wrap" property to "nowrap". If the property is set to "wrap" the flex items will
+be wrapped together and that will allow them to move to multiple rows while still maintaining together. "wrap-reverse" is
+the same as "wrap" just the multiple rows or columns created will be in reverse order. -Examples: https://css-tricks.com/almanac/properties/f/flex-wrap/
+
+4. flex-flow: - it is basically a shortcut when defining "flex-direction" and "flex-wrap".
+
+5. justify-content: flex-start | flex-end | centre | space-between | space-around | space-evenly - This property basically
+defines the position of items in the container relative to one another. How the items are aligned along the main axis.
+
+6. align-items: flex-start | flex-end | centre | stretch | baseline - this property is focused on positioning items in the 
+container based on the cross axis of the container. 
+
+7. align-content: flex-start | flex-end | centre | stretch | space-between | space-around - When there are multiple lines
+of items in the container this property is used to move it around the container. It is similar to "justify-content" and to
+"align-items" just in this case we are working with multiple line and moving them through the cross-axis.
+
++Properties of the "flex item" the child object:
+------------------------------------------------
+
+1. order: *integer value* - order property tells the engine in what order do we want to show the flex items in the flex
+container. If the order property is not set, then the items will be shown in the default order ( meaning the way they were
+coded, hierarchically).
+
+2. flex-grow: *integer value* - it sets the ability of flex item to grow in the remaining space of the flex container. If
+the remaining space in the flex container is 27px and we set the first flex item's flex-grow to 1 and second flex item's
+flex-grow to 2 it will divide the remaining space in flex container of 27 into 3 parts. One part going to the first item
+and the remaining 2 parts going to the second item.
+Negative numbers are invalid and the default value is 0.
+- Detailed explanation of "flex-grow" - https://css-tricks.com/flex-grow-is-weird/
+
+3. flex-shrink
+
+4. flex-basis: - It defines the default size of the flex items. 
+
+5. align-self: - is the same as align-items but it is focused on a single item in the container. It has the same values as
+align-items.
+-Example: https://prnt.sc/whn66q
+
+
++ Selectors +
+-------------
+- https://code.tutsplus.com/tutorials/the-30-css-selectors-you-must-memorize--net-16048
+
++ Basic Selectors:
+------------------
+1. * - used to select every single element, it is not recommended for use, because it can slow down the 
+effectiveness.
+2. #X - selection by id.
+3. .X - selection by class.
+4. X - type selector, selecting all HTML elements of a certain type ( for an example, all "img" tags )
+
++ Combinator Selectors:
+-----------------------
+- https://www.w3schools.com/css/tryit.asp?filename=trycss_sel_element_tilde
+
+5. X Y - descendant selector, X is ul Y is a, rather than targeting all anchor tags, you only need to target 
+the anchors which are within an unordered list
+6. X + Y - Adjacent Sibling Selector, selects the element that is the sibling of the X element, example, 
+div + p --> will select the paragraph that is the first element outside the div element.
+7. X > Y - The child selector selects all elements that are the direct children of a specified element. All
+Y that are direct children of X. We are also able to specify this even further and say --> #container > ul
+8. X ~ Y - General Sibling Selector, selects all siblings of X that are Y, not only the next sibling ( like
+the X + Y does )
+
++ Attribute Selectors:
+----------------------
+
+9. X[title] - attributes selector, will select all X html tags that have "title" attribute specified.
+10. X[href="foo"] - we are also able to specify the value of attribute that we are looking for on the X element,
+this will result in change to elements that are of type X with attribute "href" and value of that attribute
+being "foo".
+11. X[href*="foo"] - using the "*=" sign we create a more general value of href, the 10th selector would
+only return elements whose "href" value is "foo" and nothing more or less, with the 11th selector we return
+all elements whose "href" value at any point has "foo" inside of it.
