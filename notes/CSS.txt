@@ -81,6 +81,10 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 Anatomy of FlexBox - https://prnt.sc/v307n2
 -Main Axis can be horizontal or vertical, it depends how is the flex-direction set.
 
+
+AMAZING VIDEO ON FLEXBOX AND USES:
+- https://www.youtube.com/watch?v=vQAvjof1oe4
+
 +Properties of the "flex container" the parent object:
 ------------------------------------------------------
 
