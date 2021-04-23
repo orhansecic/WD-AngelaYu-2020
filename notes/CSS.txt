@@ -1,6 +1,11 @@
 CSS - Cascading Style Sheets
 CSS - cant do anything on its own, its purpose is to style an Markup language
 
+Content:
++ 1. CSS FlexBox
++ 2. CSS Grid
+
+
 For exercise: 
 https://www.frontendmentor.io/challenges/four-card-feature-section-weK1eFYK
 
@@ -74,6 +79,9 @@ on the website by changing the properties (top, bottom, left, right) - 49. CSS S
 + clear: left; anti float
 
 ++++++++++++FlexBox++++++++++++
+1. CSS FlexBox:
+---------------
+
 Flex-Box Froggy - Great Game that helps you work on your flex-box skills.
 
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/
@@ -132,6 +140,150 @@ Negative numbers are invalid and the default value is 0.
 5. align-self: - is the same as align-items but it is focused on a single item in the container. It has the same values as
 align-items.
 -Example: https://prnt.sc/whn66q
+
+++++++++++++CSS-Grid++++++++++++
+2. CSS Grid
+-----------
+
+
+- Documentation: https://learncssgrid.com/
+
++ Grid Container:
+-----------------
+
++ display: grid;
+- Create a grid container by setting the "display" property with a value of "grid" or "inline-grid".
+All direct children of grid containers become grid items.
+- Creating the grid layout makes Grid Items in a row layout, one under another, which means that each item
+is a row by itself, the width of each item is equal to the width of the parent element, height is equal
+to the height of the parent element divided by the number of elements.
+
++ "Grid items are placed in rows by default and span the full width of the grid container."
+
++ display: inline-grid;
+- We are also able to set the value of display to "inline-grid" and still implement the grid layout but 
+
++ Explicit Grid:
+----------------
+
+- This attribute is set on the container (parent) element of grid layout.
+- We are able to create a grid rows or columns and explicitly specify the height (if it is a row) or the 
+width (if it is a column).
+- We do this by using: "grid-template-rows:" and "grid-template-columns:"
+
++ grid-template-rows:
+
+- "grid-template-rows:" sets the behaviour of the grid layout to rows every individual item is a new row,
+values that we pass to this attribute define the height of each item individually.
+- We are able to pass multiple numbers to this CSS Attribute, these values from left to right influence items
+from the first item of grid created to the last.
+- We can also have less values then the items in the grid, this will result in the changes made only to
+items that had the value passed, while the rest will just have the height of their content.
+- Example: https://prnt.sc/11sscbk
+
++ grid-template-columns:
+
+- "grid-template-column:" sets the behaviour of the grid layout to columns, values that we pass to this 
+attribute define the width of each column individually.
+- That is why when we set the values to the "grid-template-columns:" the number of values will define the
+number of columns we have.
+- For an example, we set 3 numbers as values in the "grid-template-columns:" this means that only three
+columns will be defined and their width will be those numbers, if the number of items is greater then the
+number of columns it just means that items will be sorted into those 3 columns, first three items will be 
+in column 1, column 2 and column 3 respectfully, item 4 will go into column 1, item 5 will go into column 2
+and so on.
+- Example: https://prnt.sc/11ssni7
+
++ IMPORTANT TO UDNERSTAND:
+- These two attributes are used to define the height or width of the columns and rows.
+
++ "fr" value:
+-------------
+- these two "grid..." attributes are able to accept any non negative value as the value by witch the 
+height and width will be defined.
+- One of these values that are accepted is the "fr" type value.
+- The "fr" unit helps create flexible grid tracks. It represents a fraction of the available space in 
+the grid container.
+
+- The most simple example is all items using the "fr" value ( these units can be combined with other units,
+one item is using pixels, other item is using em and the last one is using fr, anything can be used ),
+imagine we have 6 items in our grid layout, we set that every item has a width (column) of 1 fr, this means
+that the width of every item will be 1 / 6 of the width.
+- In the example above, if one item has the 2 fr value, he will be double the size in width of other items,
+but what is the 1fr in this case it is not 1/6 because we divide the page into the total amount of "fr"
+units we have in this case "7", and then say that all items are 1/7 except one that is 2/7.
+- "fr" value is great when we are working with changing values, because it is a dynamic value that we set 
+and not a static such as the strict number of pixel width or height.
+
++ Minimum and Maximum Size:
+---------------------------
+
+- Example: https://prnt.sc/11stru7
+- Tracks sizes can be defined to have a minimum and/or maximum size with the minmax() function.
+- The minmax() function accepts 2 arguments: the first is the minimum size of the track and the 
+second the maximum size. Alongside length values, the values can also be auto, which allows the 
+track to grow/stretch based on the size of the content.
+
++ Repeating Grid Tracks:
+------------------------
+
+- Example: https://prnt.sc/11stt7o
+- repeat() is a function that we can set as the value of "grid-template-columns" or "grid-template-rows"
+to which we pass two arguments.
+- the first argument is a simple number, that defines how many times will the value repeat itself, if we 
+use it in the "grid-template-columns" and say the first argument of "repeat()" function is 4 we are saying
+that 4 columns will be created with the value of the second argument.
+- the second argument is just the height or width that we pass and that will be repeated the x number of
+times. 
+
+- "grid-template-columns: repeat(4, 100px) ====> grid-template-columns: 100px 100px 100px 100px;"
+
+- repeat() function can be used in combination with other values, for an example we define the width of the
+first column as 100px to the 2nd 3rd and 4th column we say "repeat(3, 200px)" and the 5th column is 300px
+- "grid-template-column: 100px repeat(3, 200px) 300px;" ----> this is 100% valid.
+
++ Grid Gaps (Gutters):
+----------------------
+
+- "grid-column-gap" and "grid-row-gap" attributes create spaces (gutters) between the columns and rows 
+respectfully.
+- These gaps are only created between the rows and columns and not between the grid items and the grid container.
+- Example: https://prnt.sc/11su7mw
+
+- We are also able to just say "grid-gap" and pass two or one number.
+- if two values are set, the first value will specify the "grid-row-gap" and the second is "grid-column-gap"
+- If one value is set, then it will set the gap on both attributes.
+
++ Aligning Grid Items (Box Alignment):
+--------------------------------------
+
++ justify-items and justify-self - align the items across the row axis
+
++ align-items and align-self - align the items across the column axis
+
+- justify-content and align-items are applied to the container element (the parent element) and can have
+the following values set: 
+- auto
+- normal
+- start
+- end
+- centre
+- stretch
+- baseline
+- first baseline
+- last baseline
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 + Selectors +
