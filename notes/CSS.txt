@@ -4,6 +4,8 @@ CSS - cant do anything on its own, its purpose is to style an Markup language
 Content:
 + 1. CSS FlexBox
 + 2. CSS Grid
++ Selectors
++ "@media" queries
 
 
 For exercise: 
@@ -274,6 +276,55 @@ the following values set:
 - last baseline
 
 
+++++++++++++@media Queries++++++++++++
+
+"@media" queries:
+-----------------
+
+- media queries are used to create a responsive web sites.
+- In today's day and age, it is very important to have responsive design, your webpage will most likely be
+opened on a desktop monitor but also on many different devices, such as mobile phones and tablets.
+
++ Syntax:
+---------
+- Syntax: https://prnt.sc/12rdgfi
+
+- To implement a media query is very simple.
+- It is a part of CSS so we do not have to import any libraries or do any changes to the normal CSS that we
+use.
+- We just simply begin by saying: "@media", the "@" sign is important.
+
+- @media MediaType and (MediaFeature)
+
+- MediaType is used to select the type of the Media for which we are making these changes.
+- Different types of Media are: screen, print, speech and all.
+- Example: https://prnt.sc/12rcv10
+
+- To MediaType almost always we will add the MeadiaFeature.
+- We do this by simply adding "and" keyword, which defines that MediaFeatures will be added.
+
+- MediaFeatures are always written inside the brackets "()".
+- With MediaFeatures we specify the conditions that have to be true for the CSS code inside the body of 
+@media query be applied to the HTML.
+
+- Example: @media all and (max-width: 500px){
+				body:{
+					color: blue;
+				}
+			}
+- If the width is greater then the maximum width that is set then this media query will not be applied.
+
+- We are able to add multiple MediaFeatures and we do that by using keywords, the first and the most common
+one is "and" we use it to add more MediaFeatures (Conditions) that we need to fulfil for our @media query
+to be applied.
+- Second keyword is "or", where one of the MediaFeature have to be fulfilled for @media query to be applied.
+- Third is "not", just specifies that the next MediaFeature has to be false.
+
+
++++ VERY IMPORTANT +++
+- All media query code has to be at the end of the CSS, because only then the CSS will overwrite the previous
+CSS code when the conditions of media query are fulfilled.
+- Because, as we know, the document is read from top to bottom.
 
 
 
