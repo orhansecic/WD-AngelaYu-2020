@@ -6,6 +6,7 @@ Content:
 + 2. CSS Grid
 + Selectors
 + "@media" queries
++ CSS Transitions and Transforms
 
 
 For exercise: 
@@ -147,7 +148,7 @@ align-items.
 2. CSS Grid
 -----------
 
-
+- Grid Game: http://cssgridgarden.com/
 - Documentation: https://learncssgrid.com/
 
 + Grid Container:
@@ -372,3 +373,124 @@ being "foo".
 11. X[href*="foo"] - using the "*=" sign we create a more general value of href, the 10th selector would
 only return elements whose "href" value is "foo" and nothing more or less, with the 11th selector we return
 all elements whose "href" value at any point has "foo" inside of it.
+
+
+++ CSS Transitions and Transforms ++
+------------------------------------
+
+- Tutorial: https://thoughtbot.com/blog/transitions-and-transforms#transition-property-required
+
+- transforms move or change the appearance of an element, the changed state of the element
+- transition is the action between the changed states, how the element is changing and the time it takes
+for the element to change.
+
+- Transition:
+-------------
+
+- two properties are essential for transition to work, they are mandatory.
+- "transition-property" and "transition-duration"
+
+- most likely, you will see and use the shorthand version, "transition"
+- Syntax for transition: https://prnt.sc/132q5s1
+
+- transition is defined inside the element that will be affected by a transformation.
+
+
++ "transition-property":
+------------------------
+
+- it specifies the CSS property on which the transition will be applied.
+- CSS properties like: "background-colour" or "transform"...
+- Basically, something that you want to change over time, some CSS property that changes the appearance or 
+position of a element.
+
++ "transition-duration":
+------------------------
+
+- it specifies the duration that it takes the transition to end, element to transform to the end position.
+- the value can be in seconds or milliseconds.
+
+
++ Some additional properties that we can set to transition are "transition-timing" and "transition-delay".
+
++ "transition-timing":
+----------------------
+- Syntax for transition calls it "[timing-function]", but it is just a simple string value that we put.
+- the value sets the way that the transition happens, the value can be: 
+1. ease - this is set by default
+2. linear
+3. ease-in
+4. ease-out
+5. ease-in-out
+
++ "transition-delay":
+---------------------
+- we can set a delay for the transition to start.
+- it accepts seconds or milliseconds.
+- Example: transition-delay: 2s ---> transition starts after 2 seconds.
+
+- Transform:
+------------
+
+- for transform we need to specify how the element will change.
+- also, we define transform property inside the selector that specifies what action will start the transform
+process.
+- For an example: using ":hover"
+
+- There are many different values of transform property that define how the element will change.
+
++ scale():
+----------
+
+- transform: scale(value)
+- scale accepts a integer as a value, this integer will be multiplied with the current size of the element.
+- if the value is 2 the element will be the double its size, if the value is 0.5 the element will be half 
+its size.
+
+- If the value is an integer, the element's height and width will change.
+- We can also only affect the width or height of the element.
+
+- to scale we can pass 2 values, one will affect the size element's width the second number will be size of
+element's height.
+- Example: scale(2, 0.5)
+
++ rotate():
+-----------
+
+- transform: rotate(360deg)
+
+- our rotate value has to have a "deg" unit next to it, degrees.
+- with the rotate value we can rotate element clockwise or counter-clockwise.
+- positive value will rotate it clockwise, while negative value will rotate the element counter-clockwise.
+
+- the value of the rotate property can be greater then 360, meaning we can rotate more then a full circle.
+
++ translate():
+--------------
+
+- transform: translate(value)
+
+- translate is used to move element up/down - left/right.
+- Positive X value moves the element to the right, negative to the left.
+- Positive Y value moves the element to the bottom, negative to the top.
+
++ skew():
+---------
+
+- transform: skew(value)
+
+- skew tilts the element 
+
+- "transform-origin":
+---------------------
+
+- CSS property that can be set on the parent element, same as the transition.
+- with transform-origin we specify what is the point from which the transformation take effect.
+- for an example, what is the point of rotation, by default it is the centre of the element, but we can 
+change it.
+
+- Combine Transforms:
+---------------------
+
+- We can put multiple values to the transform property, multiple different transformations can happen to a 
+single element.
