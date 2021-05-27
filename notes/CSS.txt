@@ -7,6 +7,7 @@ Content:
 + Selectors
 + "@media" queries
 + CSS Transitions and Transforms
++ CSS Animation
 
 
 For exercise: 
@@ -494,3 +495,140 @@ change it.
 
 - We can put multiple values to the transform property, multiple different transformations can happen to a 
 single element.
+
++++++++++++++++++
++ CSS Animation +
+-----------------
+
+- CSS Animation is a property that can be used instead of transition.
+- with animation, same as with transition, we define the path of elements transformation.
+- For an example: duration, delay, style of transition and many more.
+
+- CSS Animation is defined the same way as other properties, we just put "animation:"
+- animation property is defined inside the element that is being animated, that is going through transformation
+- basically, the logic is same as with transition.
+
+- Every animation has to have two essential elements:
++ 1. Key-frames
++ 2. Animation Properties
+
++++++++++++++
++ Key-frames:
+-------------
+
+- key-frames define the process of animation.
+- if we define animation property same way as transition property, it would mean that animation is the process
+that takes an element from one transformation phase to another.
+- key-frames, divide this phase into several parts, and we are able to customise how the process will behave
+
+- Collection of our key-frames is the animation itself.
+- the syntax of a key-frames is simple, "@keyframes nameOfTheAnimation{}"
+
+- Each @keyframes are composed of:
+1. Name of the Animation
+2. Stages of the Animation
+3. CSS Properties
+
++ 1. Name of the Animation:
+---------------------------
+- very simple and straight forward, it is just the name of the animation itself, so we can identify it.
+- names are very important, for the description of the animation itself, but also with names with connect
+animations to specific elements.
+
++ 2. Stages of the Animation:
+-----------------------------
+- these stages of the animation is what makes animation property, in my opinion, better then the transition 
+property.
+- stages of animation enable developer to directly specify what will happen at exact point of animation
+process.
+- the stages are defined with "%" percentages, 0% means at the beginning of the animation - 100% means at 
+the end.
+- Of course, we are able to use any number between the minimum and maximum.
+
++ 3. CSS Properties:
+--------------------
+- the properties that we define inside the animation stages body that we defined inside the @keyframes body.
+- these are the properties that define what changes will happen to the element, same as with transition, we
+use "transform" property if we want to use some of the function of transform.
+- Of course, we can also for an example change the background colour - just by simply calling the background
+colour property and changing the value.
+
+- Most likely, we will define multiple stages in our @keyframes, which means that we will have multiple
+CSS Properties implemented in different stages.
+- The logic is very simple to understand, when element reaches a certain stage of animation the CSS properties
+inside the body of that stage will be implemented into the element, next stage will overwrite previous 
+stage's CSS properties.
+
+- Example of a @keyframes, with multiple stages and multiple CSS Properties: https://prnt.sc/1360gjp
+
++++++++++++++++++++++++
+- Animation Properties:
+-----------------------
+
+- animation properties are the collection of properties that define how the animation will happen.
+- it is identical logic to the transition properties.
+
+- When @keyframes are defined, it is basically as we defined animation, and how will animation happen, 
+what will be the stages of animation and etc.
+- Now we have to put this animation into use, we have to link it to a HTML element.
+
+- These animation properties are defined inside the element that we want to animate, transition logic.
+
+- Two essential Animation Properties that element has to have for animation to take effect are:
+1. animation-name
+2. animation-duration
+
++ 1. animation-name:
+--------------------
+- this property is used to link the @keyframes, the animation itself, to the element.
+- the value of animation-name has to be equal to the value of the specific @keyframes that we want to use.
+- Meaning, value of animation-name has to be equal to the "Name of the Animation".
+
++ 2. animation-duration:
+------------------------
+- this property just sets the duration of the animation process.
+- Stages of Animation will divide this duration into defined parts, automatically of course.
+
++ "animation" Shorthand Property:
+---------------------------------
+- Of course same as with anything else in CSS, there exists a shorthand property to set all different properties
+of animation that exist.
+- The same as with transition.
+
+- Syntax: animation: [animation-name] [animation-duration] [animation-timing-function] [animation-delay] 
+[animation-iteration-count] [animation-direction] [animation-fill-mode] [animation-play-state];
+
+- The first two properties of animation are mandatory.
+
++ "animation-iteration-count" Property:
+---------------------------------------
+- defines how many times will the animation iterate, how many times will it repeat.
+- possible values are, integer number, "infinite" - loop animation, "initial" - set it to default value and
+"inherit" - parent value.
+
++ animation-fill-mode" Property:
+--------------------------------
+- very important property.
+- specifies if the animation styles are visible before or after the animation plays.
+
+- Basically, do we want the element to have the CSS properties of the animation's final stage.
+- When animation ends element stays the way the animation changed him.
+
+- by default, the element will return back to its CSS.
+
+- Values of this property are:
+1. backwards - the Animation's CSS Properties will be applied to the element during the animation-delay 
+2. forward - when the animation ends the element will still be affected by the Animation's CSS Properties
+3. both 
+4. normal(default)
+
+++++++++++++++++++++++
++ Multiple Animations:
+----------------------
+
+- We can add multiple animations @keyframes to a single element.
+- We just divide them with a comma ",".
+
+.div {
+  animation: slideIn 2s, rotate 1.75s;
+}
