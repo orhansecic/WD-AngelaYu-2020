@@ -77,7 +77,7 @@ means that elements box is around him, inline-block is best of both worlds - ele
 +position: static, relative  --> static position of an HTML element is a default value which means that the HTML element will be shown on the website
 in the same order the code was written, relative changes the position of an HTML element by creating the ability of an element to move freely
 on the website by changing the properties (top, bottom, left, right) - 49. CSS Static and Relative Positioning
-+position: absolute --> similar to relative, but it influences the position of HTML elements it does not leave a "ghost" of element where it was
++position: absolute --> similar to relative, but it does not influence the position of HTML elements it does not leave a "ghost" of element where it was
 50. Absolute positioning
 + position: fixed
 + float: left; HTML element floats to the left, text will wrap around image
